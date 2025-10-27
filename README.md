@@ -8,3 +8,4 @@ feature:
 
 Gonna add some cool features soon, of course i'll fix the UI, i know it's ugly as hell, atleast is still on WCAG.
 
+take a look: https://darinjse.github.io/todolist-minidemo/
