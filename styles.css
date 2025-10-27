@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+nav {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 0.8;
+}
+
+.task-input {
+  position: relative;
+  transform: scale(1.5);
+  margin: 15px auto;
+}
+
+.task-list {
+  width: 70vw;
+  min-height: 45vh;
+  border: 1px solid rgb(209, 194, 194);
+  background-color: rgb(226, 222, 217);
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.task {
+  margin: 0 20px;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: rgb(241, 229, 229);
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px rgb(146, 130, 130);
+}
+
+.task span:first-child {
+  margin: 0 2px;
+  margin-left: 10px;
+}
+
+.pointer::before {
+  content: '👉';
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  animation: thisHere 0.2s ease-in-out infinite alternate; */
+}
+
+@keyframes thisHere {
+  from {
+    transform: rotate(-40deg) translate(-15px, 0);
+  }
+
+  to {
+    transform: rotate(-40deg) translate(10px, 0);
+  }
+}
+
+.task-list span {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.done, .delete {
+  margin-right: 10px;
+}
