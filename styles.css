@@ -45,6 +45,13 @@ main {
   margin: 0 auto;
   margin-top: 10px;
   padding-bottom: 5px;
+  text-align: center;
+}
+
+.empty-msg {
+  margin: 20vh auto;
+  font-weight: 700;
+  color: rgb(109, 103, 103);
 }
 
 .task {
