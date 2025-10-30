@@ -6,6 +6,6 @@ This project is just demonstration for my laerning progress in web development, 
 feature:
 - Add task, checklist, delete, that's it.
 
-Gonna add some cool features soon, of course i'll fix the UI, i know it's ugly as hell, atleast is still on WCAG.
+Gonna add some cool features soon, of course i'll fix the UI, i know it's ugly as hell, atleast is still on WCAG, idc about aria, it's a static project.
 
 take a look: https://darinjse.github.io/todolist-minidemo/
