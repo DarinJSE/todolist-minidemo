@@ -6,6 +6,7 @@ This project is just demonstration for my laerning progress in web development, 
 
 feature:
 - Add task, checklist, delete, that's it.
+- Since i used mobile first approach, so i didn't enhance to the higher width UI yet. So it's mobile viewport.
 
 Gonna add some cool features soon, of course i'll fix the UI, i know it's ugly as hell, atleast is still on WCAG.
 
