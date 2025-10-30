@@ -1,6 +1,6 @@
 
-# Mini Project Series: Simple Todo-list
-
+# Mini Project Series: Simple Todo-list 
+(exercising, not for portofolio, gotta stay active twin✌🥀💔)
 This project is just demonstration for my laerning progress in web development, especially front-end, nothing special, just regular todo-list.
 
 feature:
