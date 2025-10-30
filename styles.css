@@ -7,7 +7,7 @@ body {
 }
 
 .title {
-  font-size: 1.6rem;
+  font-size: clamp(0.5rem, 1.2rem, 1.4rem);
 }
 
 .wrap {
@@ -26,6 +26,7 @@ body {
 
 main {
   width: 100%;
+  height: auto;
   margin: 0 auto;
   text-align: center;
   line-height: 0.8;
@@ -39,7 +40,7 @@ main {
 
 .task-list {
   width: 70vw;
-  min-height: 45vh;
+  min-height: 60vh;
   border: 1px solid rgb(209, 194, 194);
   background-color: rgb(226, 222, 217);
   margin: 0 auto;
@@ -49,9 +50,10 @@ main {
 }
 
 .empty-msg {
-  margin: 20vh auto;
+  margin: 30vh auto;
   font-weight: 700;
   color: rgb(109, 103, 103);
+  font-size: clamp(0.6rem, 0.8rem, 1rem);
 }
 
 .task {
@@ -60,10 +62,10 @@ main {
   background-color: rgb(241, 229, 229);
   border-radius: 5px;
   box-shadow: 1px 1px 1px 1px rgb(146, 130, 130);
-  text-align: left;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .pointer::before {
@@ -89,3 +91,28 @@ main {
   margin-left: 10px;
 }
 
+@media (min-width: 480px) {
+  .task-input {
+    transform: scale(1.5) translate(45px, 0);
+  }
+
+
+}
+
+.done, .delete {
+  transform: scale(1.2);
+  padding: 5px;
+  border: 1px solid rgb(185, 181, 181);
+  border-radius: 2px;
+  color: rgb(136, 127, 127);
+  margin-right: 5px;
+}
+
+.done:hover, .delete:hover {
+  color: black;
+  border: 1px solid black;
+}
+
+.current-progress {
+  margin: 35px auto;
+}
