@@ -6,10 +6,22 @@ body {
   font-family: 'Open Sans', Arial, sans-serif;
 }
 
-nav {
-  width: 100%;
+.title {
+  font-size: 1.6rem;
+}
+
+.wrap {
+  width: 70vw;
   margin: 0 auto;
-  text-align: center;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nwrp {
+  text-align: left;
 }
 
 main {
@@ -21,7 +33,7 @@ main {
 
 .task-input {
   position: relative;
-  transform: scale(1.5);
+  transform: scale(1.2);
   margin: 15px auto;
 }
 
@@ -32,20 +44,19 @@ main {
   background-color: rgb(226, 222, 217);
   margin: 0 auto;
   margin-top: 10px;
+  padding-bottom: 5px;
 }
 
 .task {
-  margin: 0 20px;
-  margin-top: 15px;
+  margin: 10px 20px;
   padding: 10px;
   background-color: rgb(241, 229, 229);
   border-radius: 5px;
   box-shadow: 1px 1px 1px 1px rgb(146, 130, 130);
-}
-
-.task span:first-child {
-  margin: 0 2px;
-  margin-left: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .pointer::before {
@@ -71,6 +82,3 @@ main {
   margin-left: 10px;
 }
 
-.done, .delete {
-  margin-right: 10px;
-}

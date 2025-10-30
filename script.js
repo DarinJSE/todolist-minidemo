@@ -6,7 +6,7 @@ addButton.addEventListener('click', () => {
   if (taskText) {
     const newTask = document.createElement('div');
     newTask.classList.add('task');
-    newTask.innerHTML = `${taskText} <span class="done">✔</span><span class="delete">🗑</span>`;
+    newTask.innerHTML = `${taskText} <div class="ddl"><span class="done">✔</span><span class="delete">🗑</span></div>`;
     taskList.appendChild(newTask);
 
     const doneBtn = newTask.querySelector('.done');
