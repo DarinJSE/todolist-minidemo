@@ -6,10 +6,40 @@ mptMsg.textContent = 'You have NO GOALS, loser!';
 taskList.appendChild(mptMsg);
 
 const popup = document.querySelector('.popup');
+const overlay = document.querySelector('.overlay');
 const popupInput = document.querySelector('.popup-input');
 const popupAdd = document.querySelector('.popup-add');
 const popupCancel = document.querySelector('.popup-cancel');
-const overlay = document.querySelector('.overlay');
+
+const perc = document.querySelector('.percentage');
+const fdbk = document.querySelector('.perc-fdback');
+
+function updateProgress() {
+  const tasks = taskList.querySelectorAll('.task');
+  const total = tasks.length;
+
+  if (total === 0) {
+    perc.textContent = "You didn't do shit bruv!";
+    fdbk.textContent = '';
+    return;
+  }
+
+  let doneCount = 0;
+  tasks.forEach(task => {
+    if (task.style.textDecoration === 'line-through') doneCount++;
+  });
+
+  const percentage = Math.round((doneCount / total) * 100);
+  perc.textContent = `${percentage}%`;
+
+  if (percentage === 100) {
+    fdbk.textContent = "All done, finally!";
+  } else if (percentage > 0) {
+    fdbk.textContent = "Keep going, bruv!";
+  } else {
+    fdbk.textContent = '';
+  }
+}
 
 addButton.addEventListener('click', () => {
   popup.classList.remove('hide');
@@ -24,12 +54,8 @@ popupCancel.addEventListener('click', () => {
 });
 
 popupInput.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') {
-    popupAdd.click();
-    overlay.classList.add('hide');
-  }
+  if (e.key === 'Enter') popupAdd.click();
 });
-
 
 popupAdd.addEventListener('click', () => {
   const taskText = popupInput.value.trim();
@@ -46,6 +72,7 @@ popupAdd.addEventListener('click', () => {
       <span class="delete">🗑</span>
     </div>
   `;
+
   taskList.appendChild(newTask);
   popupInput.value = '';
   popup.classList.add('hide');
@@ -57,6 +84,7 @@ popupAdd.addEventListener('click', () => {
   doneBtn.addEventListener('click', () => {
     newTask.style.textDecoration = 'line-through';
     newTask.style.opacity = '0.6';
+    updateProgress();
   });
 
   deleteBtn.addEventListener('click', () => {
@@ -64,5 +92,8 @@ popupAdd.addEventListener('click', () => {
     if (taskList.querySelectorAll('.task').length === 0) {
       taskList.appendChild(mptMsg);
     }
+    updateProgress();
   });
+
+  updateProgress();
 });
